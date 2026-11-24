@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0a">
+  <meta name="description" content="Discover an exceptional collection of modern grand tourers and book a private test drive at Vantage Atelier.">
+  <title>Vantage Atelier — A different kind of drive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Vantage Atelier home">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-name">VANTAGE <span>ATELIER</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#collection">Collection</a>
+      <a href="#atelier">The atelier</a>
+      <a href="#interior">Experience</a>
+      <a href="#contact">Visit us</a>
+      <a class="nav-cta" href="#test-drive">Reserve a drive <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-light" aria-hidden="true"></div>
+      <canvas id="hero-stage" class="hero-stage" aria-label="Interactive three-dimensional sports car. Drag to rotate."></canvas>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A CURATED MOTORING HOUSE · EST. 2012</p>
+        <h1 id="hero-title">A different<br>kind of <em>drive.</em></h1>
+        <p class="hero-copy">The rare feeling of finding the one.<br>Considered cars, chosen for the way they make you feel.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#collection">Explore the collection <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="#test-drive"><span class="play-icon" aria-hidden="true">▶</span> Book a private drive</a>
+        </div>
+      </div>
+      <div class="hero-vertical-note">MOVE AT YOUR OWN PACE <span></span> MAYFAIR, LONDON</div>
+      <div class="hero-bottom">
+        <div class="hero-edition"><span>01 — 04</span><span>THE AUTUMN EDITION</span></div>
+        <p class="hero-drag"><span class="drag-dash"></span> DRAG TO EXPLORE</p>
+        <a class="hero-scroll" href="#collection">SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-hud" aria-hidden="true"><span>DESIGNED TO BE FELT</span><i></i><span>2026 / 27</span></div>
+    </section>
+
+    <section class="intro section-pad">
+      <div class="intro-label"><span class="section-number">01</span><span>THE VANTAGE POINT</span></div>
+      <div class="intro-main">
+        <h2>Not just a car.<br><span>An entirely new</span> <em>perspective.</em></h2>
+        <div class="intro-bottom">
+          <p>Some things are best understood from behind the wheel. We bring exceptional cars and the people who love them a little closer together.</p>
+          <a class="text-link" href="#atelier">A little about us <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="intro-index" aria-hidden="true">V / A</div>
+    </section>
+
+    <section class="collection section-pad" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> GOOD TASTE HAS NO SHORTCUT</p>
+          <h2 id="collection-title">The <em>collection.</em></h2>
+        </div>
+        <p class="section-aside">A small, ever-changing selection.<br>Each one with a story worth taking home.</p>
+      </div>
+
+      <div class="car-grid">
+        <article class="car-card" data-car="911">
+          <button class="car-visual" type="button" aria-label="View Porsche 911 Turbo S details">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Silver sports coupe on an open road" loading="lazy">
+            <span class="car-number">01 <span>—</span> ICON</span>
+            <span class="car-visual-arrow" aria-hidden="true">↗</span>
+          </button>
+          <div class="car-card-info">
+            <div><p class="car-make">PORSCHE · 2025</p><h3>911 Turbo S</h3></div>
+            <p class="car-price">£ 287,000 <span>FROM</span></p>
+          </div>
+          <div class="car-specs"><span>3.7L Flat-six</span><span>640 hp</span><span>Petrol · PDK</span></div>
+          <button class="car-detail-link" type="button" data-details="911">Discover this car <span aria-hidden="true">↗</span></button>
+        </article>
+
+        <article class="car-card" data-car="750s">
+          <button class="car-visual" type="button" aria-label="View McLaren 750S details">
+            <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sculptural supercar in a dramatic studio" loading="lazy">
+            <span class="car-number">02 <span>—</span> INSTINCT</span>
+            <span class="car-visual-arrow" aria-hidden="true">↗</span>
+          </button>
+          <div class="car-card-info">
+            <div><p class="car-make">MCLAREN · 2025</p><h3>750S</h3></div>
+            <p class="car-price">£ 258,000 <span>FROM</span></p>
+          </div>
+          <div class="car-specs"><span>4.0L Twin-turbo V8</span><span>740 hp</span><span>Petrol · 7-speed DCT</span></div>
+          <button class="car-detail-link" type="button" data-details="750s">Discover this car <span aria-hidden="true">↗</span></button>
+        </article>
+
+        <article class="car-card" data-car="amg">
+          <button class="car-visual" type="button" aria-label="View Mercedes-AMG GT 63 details">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Dark luxury coupe photographed in the city" loading="lazy">
+            <span class="car-number">03 <span>—</span> COMPOSURE</span>
+            <span class="car-visual-arrow" aria-hidden="true">↗</span>
+          </button>
+          <div class="car-card-info">
+            <div><p class="car-make">MERCEDES-AMG · 2025</p><h3>GT 63</h3></div>
+            <p class="car-price">£ 164,000 <span>FROM</span></p>
+          </div>
+          <div class="car-specs"><span>4.0L Bi-turbo V8</span><span>577 hp</span><span>Petrol · 9-speed</span></div>
+          <button class="car-detail-link" type="button" data-details="amg">Discover this car <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+      <p class="collection-note"><span>↗</span> Every car in our collection is hand-selected, independently inspected and presented without compromise.</p>
+    </section>
+
+    <section class="anatomy section-pad" id="atelier" aria-labelledby="anatomy-title">
+      <div class="anatomy-top">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> A CLOSER LOOK</p>
+          <h2 id="anatomy-title">Beautifully<br><em>considered.</em></h2>
+        </div>
+        <p class="anatomy-copy">Every curve has a purpose. Every detail is an invitation to look again. Get to know the engineering behind the emotion.</p>
+      </div>
+      <div class="anatomy-stage">
+        <canvas id="exploded-stage" aria-label="Interactive 3D exploded view of a sports car. Scroll or use the button to assemble its components."></canvas>
+        <div class="anatomy-guides" aria-hidden="true">
+          <div class="part-label label-wheel"><span class="label-dot"></span><span>01 / Forged alloys</span><i></i></div>
+          <div class="part-label label-body"><span class="label-dot"></span><span>02 / Carbon bodywork</span><i></i></div>
+          <div class="part-label label-light"><span class="label-dot"></span><span>03 / Adaptive lighting</span><i></i></div>
+          <div class="part-label label-cabin"><span class="label-dot"></span><span>04 / Driver's cockpit</span><i></i></div>
+        </div>
+        <div class="anatomy-caption">
+          <span class="caption-index">01 — THE FORM, DECONSTRUCTED</span>
+          <button class="assemble-button" type="button" aria-pressed="false"><span class="assemble-icon" aria-hidden="true">✳</span> Assemble the details</button>
+          <span class="caption-hint">SCROLL TO EXPLORE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare section-pad" aria-labelledby="compare-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> HEAD TO HEAD</p><h2 id="compare-title">Find your <em>feeling.</em></h2></div>
+        <p class="section-aside">Two or three very different answers.<br>One is going to feel like yours.</p>
+      </div>
+      <div class="compare-controls">
+        <p class="compare-intro">CHOOSE YOUR LINE-UP <span>Pick two or three to compare</span></p>
+        <div class="compare-picks" role="group" aria-label="Select cars to compare"></div>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead><tr><th scope="col">THE DETAILS</th></tr></thead>
+          <tbody>
+            <tr data-spec="price"><th scope="row">Asking price</th></tr>
+            <tr data-spec="engine"><th scope="row">Engine</th></tr>
+            <tr data-spec="power"><th scope="row">Power</th></tr>
+            <tr data-spec="topSpeed"><th scope="row">Top speed</th></tr>
+            <tr data-spec="economy"><th scope="row">Combined economy*</th></tr>
+            <tr data-spec="safety"><th scope="row">Safety highlights</th></tr>
+            <tr data-spec="technology"><th scope="row">Standout technology</th></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-footnote">* Manufacturer-quoted combined fuel consumption; actual results vary with driving style and conditions.</p>
+    </section>
+
+    <section class="interior-section" id="interior" aria-labelledby="interior-title">
+      <div class="interior-image" role="group" aria-label="Interactive three-dimensional sports car interior. Drag to look around.">
+        <canvas id="interior-stage" aria-label="Three-dimensional car cockpit with seats, steering wheel, dashboard and infotainment system. Drag to rotate."></canvas>
+        <div class="interior-gradient"></div>
+        <div class="interior-ui">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR WORLD, REFINED</p>
+          <h2 id="interior-title">Settle <em>in.</em></h2>
+          <p>The best seat in the house is the one you haven't sat in yet.</p>
+          <a class="button button-outline" href="#test-drive">Find your seat <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="interior-orbit" aria-hidden="true"><span>360°</span><i></i></div>
+        <p class="interior-caption">A QUIETER KIND OF THRILL <span>—</span> 911 TURBO S</p>
+        <div class="interior-markers">
+          <button type="button" class="interior-marker marker-seat" data-caption="Hand-finished, yours from the first touch." aria-label="Discover hand-finished leather seats"><span>01</span></button>
+          <button type="button" class="interior-marker marker-console" data-caption="Everything you need. Nothing you don't." aria-label="Discover the driver-focused console"><span>02</span></button>
+          <button type="button" class="interior-marker marker-wheel" data-caption="Precision, right at your fingertips." aria-label="Discover the precision steering wheel"><span>03</span></button>
+        </div>
+      </div>
+      <div class="interior-bottom"><span>THE INTERIOR EXPERIENCE</span><span>MOVE YOUR CURSOR TO TAKE A LOOK <i aria-hidden="true">↗</i></span></div>
+    </section>
+
+    <section class="booking section-pad" id="test-drive" aria-labelledby="booking-title">
+      <div class="booking-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE BEST PART IS WHAT HAPPENS NEXT</p>
+        <h2 id="booking-title">Take the<br><em>long way.</em></h2>
+        <p>Get acquainted on your own terms. Tell us what you'd like to drive and when, and a member of our team will be in touch to make it happen.</p>
+        <div class="booking-note"><span class="note-icon" aria-hidden="true">✳</span><span>Not a showroom tour.<br>A drive made just for you.</span></div>
+      </div>
+      <form class="booking-form">
+        <div class="form-heading"><span>PRIVATE DRIVE REQUEST</span><span>01 — 02</span></div>
+        <div class="form-row">
+          <label>Your name<input name="name" autocomplete="name" placeholder="How should we address you?" required></label>
+          <label>Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="+44" required></label>
+        </div>
+        <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Your chosen car<select name="car" required><option value="" disabled selected>Select from our collection</option><option value="911">Porsche 911 Turbo S</option><option value="750s">McLaren 750S</option><option value="amg">Mercedes-AMG GT 63</option></select></label>
+        <div class="form-row">
+          <label>Preferred date<input name="date" type="date" required></label>
+          <label>Preferred time<select name="time" required><option value="" disabled selected>Choose a time</option><option>09:00 — 11:00</option><option>11:00 — 13:00</option><option>13:00 — 15:00</option><option>15:00 — 17:00</option></select></label>
+        </div>
+        <button class="button button-gold submit-button" type="submit">Request a private drive <span aria-hidden="true">↗</span></button>
+        <p class="form-privacy">This front-end demo does not transmit or store your form details.</p>
+      </form>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Vantage Atelier home"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-name">VANTAGE <span>ATELIER</span></span></a>
+          <p>Good cars. Good company.<br>All the time in the world.</p>
+        </div>
+        <div class="footer-contact"><span class="footer-label">COME FIND US</span><a href="https://maps.google.com/?q=Mayfair,+London" target="_blank" rel="noreferrer">By private appointment<br>Mayfair, London, United Kingdom <span aria-hidden="true">↗</span></a></div>
+        <div class="footer-contact"><span class="footer-label">SAY HELLO</span><a href="tel:+442079460123">+44 (0)20 7946 0123</a><a href="mailto:hello@vantageatelier.example">hello@vantageatelier.example</a></div>
+        <div class="footer-contact"><span class="footer-label">ELSEWHERE</span><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 VANTAGE ATELIER. GOOD THINGS TAKE TIME.</span><a href="#top">BACK TO THE TOP ↑</a><span>AN INDEPENDENT MOTORING HOUSE</span></div>
+    </footer>
+  </main>
+
+  <dialog class="car-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close car details">×</button>
+    <div class="dialog-image">
+      <img src="" alt="">
+      <canvas aria-label="Interactive three-dimensional view of the selected car"></canvas>
+      <div class="dialog-view-tabs" role="group" aria-label="Choose car view">
+        <button type="button" data-view="exterior" aria-pressed="true">Exterior</button>
+        <button type="button" data-view="interior" aria-pressed="false">Interior</button>
+      </div>
+    </div>
+    <div class="dialog-content">
+      <p class="eyebrow"><span class="eyebrow-line"></span> A CLOSER ACQUAINTANCE</p>
+      <p class="dialog-make"></p><h2 id="dialog-title"></h2>
+      <p class="dialog-description"></p>
+      <div class="dialog-specs"></div>
+      <div class="dialog-features"><span>A FEW GOOD DETAILS</span><div></div></div>
+      <div class="dialog-colours"><span>AVAILABLE FINISHES</span><div></div></div>
+      <a class="button button-gold dialog-book" href="#test-drive">Make it yours <span aria-hidden="true">↗</span></a>
+    </div>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
